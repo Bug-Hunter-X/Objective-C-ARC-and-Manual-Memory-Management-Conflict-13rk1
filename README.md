@@ -1,0 +1,5 @@
+# Objective-C ARC and Manual Memory Management Conflict
+
+This repository demonstrates a common error in Objective-C related to memory management.  Specifically, it highlights the risks of mixing Automatic Reference Counting (ARC) with manual retain/release calls. Improper handling can lead to crashes or memory leaks that are difficult to detect.
+
+The `bug.m` file contains the erroneous code, while `bugSolution.m` provides the corrected version.  The problem stems from incorrect management of object retain counts when manually retaining objects under ARC. The solution emphasizes solely using ARC's automatic management or carefully coordinating manual memory management outside of ARC's scope to prevent memory errors.  Always prefer ARC's simpler and safer approach unless strictly necessary to interact with legacy code.
